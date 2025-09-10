@@ -1,14 +1,24 @@
-x = {3,4,5,2,1,10,8,77,60,50}
+x = [3,4,5,2,1,10,8,77,60,50]
+i = 0
 maks = 0
-# For Loop
-for i in x:
-  if x[i] > x[i-1]:
-    if x[i] > maks:
-      maks = x[i]
-  elif x[i] < x[i-1]:
-    if x[i-1] > maks:
-      maks = x[i-1]
+
+# for Loop
+for i in range( len(x)):
+  if x[i] > maks:
+    maks = x[i]
+  elif x[i-1] > maks:
+    maks = x[i-1]
   else:
     continue
-
 print(maks)
+maks = 0
+
+# while Loop
+while i < len(x):
+  if x[i] > maks:
+    maks = x[i]
+  elif x[i-1] > maks:
+    maks = x[i-1]
+  else:
+    continue
+print("cihuy")
